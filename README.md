@@ -14,7 +14,7 @@ Migrates tickets from sourceforge to github, using new v3 GH API, documented her
 Requirements:
 
  * This assumes that you have exported your tickets from SF. E.g. from a page like this: https://sourceforge.net/p/obo/admin/export
- * You have a github account and have created an OAth token here: https://github.com/settings/tokens    
+ * You have a github account with admin permissions for the target repository, and have created an OAth token here: https://github.com/settings/tokens    
  * You have "curl" in your PATH
 
 Example Usage:
@@ -44,7 +44,7 @@ ARGUMENTS:
                   Maps SF usernames to GH
                   Example: https://github.com/geneontology/go-site/blob/master/metadata/users_sf2gh.json
 
-   -a | --assignee  USERNAME *RECOMMENDED*
+   -a | --assignee  USERNAME *REQUIRED*
                  Default username to assign tickets to if there is no mapping for the original SF assignee in usermap
 
    -c | --collaborators COLLAB-JSON-FILE *REQUIRED*
